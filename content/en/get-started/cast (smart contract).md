@@ -83,7 +83,7 @@ Create a DSA Account using this function. It returns the address of the DSA acco
 |accountversion|uint256|Account Module version|
 |_origin|address|Where Smart Account is created|
 
-* [cast(_targets, _datas, _origin)](https://github.com/Instadapp/dsa-contracts/blob/master/contracts/v2/accounts/module1/Implementation_m1.sol#L80)
+* #### cast(_targets, _datas, _origin) [#](https://github.com/Instadapp/dsa-contracts/blob/master/contracts/v2/accounts/module1/Implementation_m1.sol#L80)
 Using cast() user can access the connectors, which allows the smart account to interact with protocols or set up any settings on the smart account.
 
 |parameter|type|description|
@@ -92,7 +92,7 @@ _target|string[]|string array mentioning connectors, encoded data|
 |_datas|bytes[]|encoded data containing function abi and params|
 
  
-## DSA Setup
+### DSA Setup
 Inside the interactingDSA contract, we will create a DSA account and use that to cast a spell.
 
 Creating InstaIndex instance
@@ -114,4 +114,4 @@ Spells denote a sequence of connector functions that will achieve a given use ca
 ```js
  IDSA(_account).cast(_targets, _data, address(0));
 ```
-We create an InstaIplementationM1 contract instance using our DSA account and then cast function to cast the spell.
+We create an InstaIplementationM1 contract instance using our DSA account and then use cast function to cast the spell.
